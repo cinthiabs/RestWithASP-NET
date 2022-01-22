@@ -24,6 +24,17 @@ namespace RestWithASP_NET5.Controllers
             return BadRequest("Invalido");
 
         }
+        [HttpGet(Name = "sub/{firstNumber}/{secondNumber}")]
+        public IActionResult Sub(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var Sub = ConvertToDecimal(firstNumber) - ConvertToDecimal(secondNumber);
+                return Ok(Sub.ToString());
+            }
+            return BadRequest("Invalido");
+
+        }
         [HttpGet(Name = "sMulti/{firstNumber}/{secondNumber}")]
         public IActionResult Multi(string firstNumber, string secondNumber)
         {
@@ -31,6 +42,17 @@ namespace RestWithASP_NET5.Controllers
             {
                 var mult = ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber);
                 return Ok(mult.ToString());
+            }
+            return BadRequest("Invalido");
+
+        }
+        [HttpGet(Name = "Div/{firstNumber}/{secondNumber}")]
+        public IActionResult Div(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var Div = ConvertToDecimal(firstNumber) / ConvertToDecimal(secondNumber);
+                return Ok(Div.ToString());
             }
             return BadRequest("Invalido");
 
