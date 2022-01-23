@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "0mhKlSjkSeFkDc/mD6KpmDYoSOc0jNlEbyAixEQSl/LRSrKnr24cbV5ynzzbEpsrbFScvwlvfwhXByrBpkIOTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cinth\\Documents\\PROGRAMAÇÃO\\APIs\\APICep\\APICep\\APICep.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cinth\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\refit\\6.1.15\\refit.6.1.15.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
