@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7nPbmjb6tAFFhVnKmd2pdzGOrv/61FQ0wxduNveZ9a5oz3Kw8oQjFT4BnKB/9vAkXW3M/A+RWnErdp3xTZSWuQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cinth\\Documents\\PROGRAMAÇÃO\\APIs Curso\\RestWithASP-NET5\\GETDadosConsole\\GETDadosConsole\\GETDadosConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cinth\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
