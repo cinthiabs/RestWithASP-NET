@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "3nvTCYwIFtuAl4t3Wf1e7CWLzqgdf0ZnlYiQCarghjxW4tToucbwwGMSDxmJhO8rqaS0htWG5RdK6ID/5k4FBg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cinth\\Documents\\PROGRAMAÇÃO\\APIs Curso\\RestWithASP-NET5\\03_RestWithASP-NET5\\RestWithASP-NET5\\RestWithASP-NET5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cinth\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\cinth\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
