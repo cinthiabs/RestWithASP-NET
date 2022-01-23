@@ -1,34 +1,55 @@
 using Microsoft.AspNetCore.Mvc;
+using RestWithASP_NET5.Model;
+using RestWithASP_NET5.Services.Implamentations;
 
 namespace RestWithASP_NET5.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
         private readonly ILogger<PersonController> _logger;
-
-        public PersonController(ILogger<PersonController> logger)
+        private PersonService _person;
+        public PersonController(ILogger<PersonController> logger, PersonService person)
         {
             _logger = logger;
+            _person = person;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+
+        [HttpGet("{id}", Name = "GETPerson")]
+        public IActionResult Get(long id)
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var person = _person.FindAll();
+            if (person == null) return NotFound();
+
+            //return Ok(_person.FindByID(id));
+            return Ok(person);
+        }
+
+        [HttpPost (Name = "PostPerson")]
+        public IActionResult Post([FromBody] Person person)
+        {
+            
+            if (person == null) return BadRequest();
+            return Ok(_person.Create(person));
+        }
+
+        [HttpPut(Name = "PutPerson")]
+        public IActionResult Put([FromBody] Person person)
+        {
+
+            if (person == null) return BadRequest();
+            return Ok(_person.Update(person));
+        }
+
+        [HttpDelete("{id}", Name ="DeletePerson")]
+        public IActionResult Delete(long id)
+        {
+             _person.Delete();
+            return NoContent();
         }
     }
 }
