@@ -52,3 +52,5 @@ C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithAS
 C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithASP-NET5\RestWithASP-NET5\obj\Debug\net6.0\ref\RestWithASP-NET5.dll
 C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithASP-NET5\RestWithASP-NET5\obj\Debug\net6.0\RestWithASP-NET5.pdb
 C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithASP-NET5\RestWithASP-NET5\obj\Debug\net6.0\RestWithASP-NET5.genruntimeconfig.cache
+C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithASP-NET5\RestWithASP-NET5\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\cinth\Documents\PROGRAMAÇÃO\APIs Curso\RestWithASP-NET5\03_RestWithASP-NET5\RestWithASP-NET5\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
