@@ -21,10 +21,9 @@ namespace GETDadosConsole
             foreach (var item in users)
             {
                 person = new Person();
-                item.Nome = person.first_name;
-                item.Username = person.username;
-                item.Email = person.email;
-
+                person.first_name  = item.Nome;
+                person.username = item.Username;
+                person.email = item.Email;
                  DataBase.SalvaDados(person);
 
             }

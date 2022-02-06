@@ -20,17 +20,16 @@ namespace GETDadosConsole
         {
             string conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             DataBase db = new DataBase();
-            string sql = @"INSERT INTO Person 
-                         (first_name,
-                            last_name,
-                            email,
-                            username)
-                            VALUES (
-                            " + person.first_name + "," +
-                            ""+ person.last_name + "," +
-                            "" + person.email + "," +
-                            "" + person.username + "," +
-                            ")";
+            string sql = "INSERT INTO Person ";
+            sql += "(first_name,";
+            sql += "email,";
+            sql += "username, ";
+            sql += "VALUES (";
+            sql += "'" +person.first_name;
+            sql += ",'" + person.email;
+            sql += ",'" + person.username;
+            sql += ")";
+                           
             using (SqlConnection sqlconnection = new SqlConnection(conn))
             {
                 try
@@ -39,6 +38,7 @@ namespace GETDadosConsole
                 }
                 catch(Exception e)
                 {
+                    
                     throw new ArgumentException(e.Message);
                 }
             }
