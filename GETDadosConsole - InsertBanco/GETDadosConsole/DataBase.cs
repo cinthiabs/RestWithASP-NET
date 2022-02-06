@@ -11,6 +11,7 @@ namespace GETDadosConsole
 {
     class DataBase
     {
+        public static int ret;
         private string conn;
         public DataBase()
         {
@@ -18,23 +19,25 @@ namespace GETDadosConsole
         }
         public static void SalvaDados(Person person)
         {
+           
             string conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             DataBase db = new DataBase();
             string sql = "INSERT INTO Person ";
-            sql += "(first_name,";
+            sql += "(fisrt_name,";
             sql += "email,";
-            sql += "username, ";
-            sql += "VALUES (";
-            sql += "'" +person.first_name;
-            sql += ",'" + person.email;
-            sql += ",'" + person.username;
+            sql += "username ";
+            sql += ") VALUES (";
+            sql += "'" + person.first_name + "'";
+            sql += ",'" + person.email + "'";
+            sql += ",'" + person.username + "'";
             sql += ")";
                            
             using (SqlConnection sqlconnection = new SqlConnection(conn))
             {
                 try
                 {
-                    var iinsert = sqlconnection.Execute(sql, person);
+                    var insert = sqlconnection.Execute(sql, person);
+                    ret = 1;
                 }
                 catch(Exception e)
                 {
@@ -42,6 +45,7 @@ namespace GETDadosConsole
                     throw new ArgumentException(e.Message);
                 }
             }
-        }
+        } 
+
     }
 }

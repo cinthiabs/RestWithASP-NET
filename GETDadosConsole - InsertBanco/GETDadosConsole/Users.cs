@@ -5,7 +5,7 @@ public partial class Users
     [JsonProperty("id")]
     public long Id { get; set; }
 
-    [JsonProperty("nome")]
+    [JsonProperty("name")]
     public string Nome { get; set; }
 
     [JsonProperty("username")]

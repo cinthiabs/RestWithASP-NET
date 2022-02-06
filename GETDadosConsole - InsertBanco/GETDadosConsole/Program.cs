@@ -3,6 +3,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
+
 namespace GETDadosConsole
 {
     class Program
@@ -21,11 +22,21 @@ namespace GETDadosConsole
             foreach (var item in users)
             {
                 person = new Person();
-                person.first_name  = item.Nome;
+                person.first_name = item.Nome;
                 person.username = item.Username;
                 person.email = item.Email;
-                 DataBase.SalvaDados(person);
 
+                DataBase.SalvaDados(person);
+
+
+                if (DataBase.ret == 1)
+                {
+                    Console.WriteLine("Dados cadastrados");
+                }
+                else
+                {
+                    Console.WriteLine("Erro na conexão");
+                }
             }
         }
     }
