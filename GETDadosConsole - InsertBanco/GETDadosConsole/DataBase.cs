@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace GETDadosConsole
 {
@@ -15,37 +16,37 @@ namespace GETDadosConsole
         private string conn;
         public DataBase()
         {
-            this.conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+             this.conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
         }
-        public static void SalvaDados(Person person)
+  
+        public static int Exists(string fisrt_name, string email, string username)
         {
-           
-            string conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-            DataBase db = new DataBase();
-            string sql = "INSERT INTO Person ";
-            sql += "(fisrt_name,";
-            sql += "email,";
-            sql += "username ";
-            sql += ") VALUES (";
-            sql += "'" + person.first_name + "'";
-            sql += ",'" + person.email + "'";
-            sql += ",'" + person.username + "'";
-            sql += ")";
-                           
-            using (SqlConnection sqlconnection = new SqlConnection(conn))
+            try
             {
-                try
+                string conn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+                using (SqlConnection sqlconnection = new SqlConnection(conn))
                 {
-                    var insert = sqlconnection.Execute(sql, person);
-                    ret = 1;
-                }
-                catch(Exception e)
-                {
-                    
-                    throw new ArgumentException(e.Message);
+                    DataTable dt = new DataTable();
+                    var sql = "PROC_INSERTPERSON '"+ fisrt_name+ "', '"+ email + "', '"+ username + "'";
+                    using (SqlCommand command = new SqlCommand(sql, sqlconnection))
+                    {
+                        sqlconnection.Open();
+
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        var result = da.Fill(dt);
+                       
+                        return result;
+                        
+                    }
                 }
             }
-        } 
+            catch
+            {
+                return -1;
+            }
+           
+
+        }
 
     }
 }

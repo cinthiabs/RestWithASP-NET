@@ -26,17 +26,20 @@ namespace GETDadosConsole
                 person.username = item.Username;
                 person.email = item.Email;
 
-                DataBase.SalvaDados(person);
 
-
-                if (DataBase.ret == 1)
+                int result = DataBase.Exists(person.first_name, person.username, person.email);
+                if (result > 0)
                 {
                     Console.WriteLine("Dados cadastrados");
+                    
                 }
                 else
                 {
-                    Console.WriteLine("Erro na conexão");
+
+                    Console.WriteLine("Dado existente na base de dados");
+
                 }
+               
             }
         }
     }
