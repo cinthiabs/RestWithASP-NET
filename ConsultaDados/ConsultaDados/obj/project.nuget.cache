@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sI9WUR7TaO9iSNd1MwKzf92VlyhicwfgWhv119D5cvWXTOheShW7SrMWqu1sql7y933/WmdrqqlB8eD2BD+iMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cinth\\Documents\\PROGRAMAÇÃO\\APIs Curso\\RestWithASP-NET5\\ConsultaDados\\ConsultaDados\\ConsultaDados.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cinth\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
